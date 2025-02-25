@@ -1,3 +1,7 @@
+'''Criar um script que recebe alguns numeros e retorne duas lista,
+1° numeros dobrados
+2° numeros ao quadados'''
+
 import os
 
 # função potência
