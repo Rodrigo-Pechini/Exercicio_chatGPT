@@ -1,6 +1,7 @@
 '''
 Criar um progrograma para cadastar clientes e exibir na tela.
 '''
+# Tentar aprimora
 
 class Pessoa:
     def __init__(self):
