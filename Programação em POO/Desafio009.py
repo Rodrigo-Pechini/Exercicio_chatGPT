@@ -1,15 +1,23 @@
+'''
+Criar um progrograma para cadastar clientes e exibir na tela.
+'''
 
 class Pessoa:
     def __init__(self):
         self.nome = None
-        self.idade = None
+        self.data = None
         self.email = None
         self.estado = None
 
     
     def cadastro(self):
         for k in self.__dict__.keys():
-            setattr( self, k, input(f'{k.capitalize()} do(a) cliente: '))
+            if k == 'data':
+                setattr(self, k, input(f'Ano de nascimento do(a) cliente: '))
+            elif k == 'estado':
+                setattr(self, k, input(f'{k.capitalize()} do(a) cliente: ').upper())
+            else: 
+                setattr(self, k, input(f'{k.capitalize()} do(a) cliente: '))
         return self
 
     def exibir_cliente(self):
@@ -21,7 +29,7 @@ class Pessoa:
 print('Cadastro de pessoa')
 cadastrados = []
 
-for i in range(0, 2):
+for i in range(1):
     cliente = Pessoa()
     cadastrados.append(cliente.cadastro())
     print('=-'*20)
